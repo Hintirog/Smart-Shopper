@@ -1,0 +1,13 @@
+extends layout
+
+block layout-content
+  div.View.UserView
+    h1.Banner Hey there, #{userProfile.nickname}!
+    div.Message
+      div.Title
+        h3 What are you up to today?
+        h1 Shopper profile
+      pre.Details=JSON.stringify(userProfile, null, 2)
+    div.NavButtons
+      a(href="/logout")
+        div.NavButton shopping list
